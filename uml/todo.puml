@@ -1,0 +1,104 @@
+@startuml
+
+//www.plantuml.com/plantuml/png/TPH1Rzim38Nl_XKwDkWjrmn5isO52dJhi1Qx33i85fSHfIH3Oj8CnVvxJJi5Qrc-1Cxto2U9UD9rPfluuAbfoUPiRcBW58aWdS6swmXRonZ3cS0H0d_yNZUpvjUckVnyO8x19F3n2FUOUQCG77A1l4tFDz5t10oRilsEmGly2k5m5gnpGeLincg5FNY24zyYa1FspNeesGvocx2JW_NIpZ9yn_OPqg3PSG-onPy8Bv-6SruPPF0xp1tPV_FTIB6GoKBKmoTaakMdfNF_zTLGNb_W3n93AavBT3jWHI7o-n1BgItun1uSievJ3p08ChuPdCwli9bELAZyBTSyTJ6n7adPbgX4ZnZsL3gWdpWeKmT5LOSywnVo0re8F6KFvAItIv6XPN3c6D5DKhkjw9h-cghXtbwiAheCRgdtG-9wUK6jANflbjNjmcQqioxNMpMybSOYbxKz4IrgixpNbjUWpHqqSLLDWrCpHhzih45Sr9QDyxAjvhCkIb1xvNypVy1VcylXkRzuPBi7a-LtPVXlYY_Pt3ryERNmVf-znT2NfNw7ltuRc_PvDNhgiz-xZGN6wLDWSBpzzx6r97T-0F9Hjg-h_HBQeV8QWZjuUWC0
+
+class Controller
+class Application
+class event
+class event2
+
+class Controller{
+
++Button removeList;
+
++Button editList;
+
++Button markComplete;
+
++Button removeItem;
+
++MenuButton addItemMenu;
++Button addItem;
++TextField addName;
++TextField addDescription;
++DatePicker addDate;
+
++ListView<event> itemDisplay;
+
++MenuButton addListMenu;
++TextField listTitle;
++Button addList;
+
++ListView<event2> listDisplay;
+
++MenuButton filterMenu;
++Button allFilter;
++Button notCompleteFilter;
++Button completeFilter;
+
++MenuButton editItemMenu;
++TextField editName;
++TextField editDescription;
++Button editItem;
++DatePicker editDate;
+
++MenuButton exportMenu;
++Button exportAll;
++Button exportSingle;
+
++MenuButton importMenu;
++Button importAll;
++Button importSingle;
+
++MenuButton sortMenu;
++Button sortRecent;
++Button sortOld;
+
++protected void markCompleteA;
+
++protected void removeListA;
+
++protected void removeItemA();
+
++protected void editListA;
+
++protected void addListMenuA;
++protected void addListA;
++protected void addItemMenuA;
++protected void addItemA;
+
++protected void editItemMenuA;
++protected void editItemA;
+
++protected void filterMenuA;
++protected void completeFilterA;
++protected void allFilterA;
++protected void notCompleteFilterA;
+
++protected void exportMenuA;
++protected void exportAllA;
++protected void exportSingleA;
+
++protected void importMenuA;
++protected void importAllA;
++protected void importSingleA;
+
++protected void sortMenuA;
++protected void sortRecentA;
++protected void sortOldA;
+}
+
+class Application{
++start(Stage stage) throws IOException;
++main(String[] args);
+}
+
+class event{
++String description item;
++LocalDate itemDate;
+}
+
+class event2{
++String descriptionList;
+}
+@enduml

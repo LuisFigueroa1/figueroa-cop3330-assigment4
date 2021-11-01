@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.figueroacop3330assigment4.Controller">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="listDisplay" layoutX="14.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+            <Button fx:id="removeList" layoutX="133.0" layoutY="63.0" mnemonicParsing="false" onAction="#removeListA" text="Remove list" />
+            <MenuButton fx:id="addListMenu" layoutX="14.0" layoutY="63.0" mnemonicParsing="false" onAction="#addListMenuA" text="Add list">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <TextField fx:id="listTitle" promptText="List Title" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="addList" mnemonicParsing="false" onAction="#addListA" text="Add" />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </MenuButton>
+            <Button fx:id="editList" layoutX="14.0" layoutY="321.0" mnemonicParsing="false" onAction="#editListA" text="Edit List" />
+            <MenuButton fx:id="exportMenu" layoutX="255.0" layoutY="125.0" mnemonicParsing="false" onAction="#exportMenuA" text="Export list">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="exportAll" mnemonicParsing="false" onAction="#exportAllA" text="Export All lists" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="exportSingle" mnemonicParsing="false" onAction="#exportSingleA" text="Export single list" />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </MenuButton>
+            <MenuButton fx:id="importMenu" layoutX="257.0" layoutY="200.0" mnemonicParsing="false" onAction="#importMenuA" text="Import list">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="importAll" mnemonicParsing="false" onAction="#importAllA" text="Import all lists" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="importSingle" mnemonicParsing="false" onAction="#importSingleA" text="Import single list" />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </MenuButton>
+            <MenuButton fx:id="addItemMenu" layoutX="356.0" layoutY="63.0" mnemonicParsing="false" onAction="#addItemMenuA" text="Add item to list">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <TextField fx:id="addName" promptText="Item name" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <TextField fx:id="addDescription" promptText="Item description" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <DatePicker fx:id="addDate" promptText="Due date:" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="addItem" mnemonicParsing="false" onAction="#addItemA" text="Add" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </MenuButton>
+            <ListView fx:id="itemDisplay" layoutX="373.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+            <Label layoutX="15.0" layoutY="100.0" prefHeight="17.0" prefWidth="59.0" text="Lists:" />
+            <Label layoutX="373.0" layoutY="100.0" text="items:" />
+            <Button fx:id="markComplete" layoutX="356.0" layoutY="322.0" mnemonicParsing="false" onAction="#markCompleteA" text="Mark item as complete" />
+            <MenuButton fx:id="filterMenu" layoutX="523.0" layoutY="322.0" mnemonicParsing="false" onAction="#filterMenuA" text="Filter">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="allFilter" mnemonicParsing="false" onAction="#allFilterA" text="All" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="notCompleteFilter" mnemonicParsing="false" onAction="#notCompleteFilterA" text="Not-completed" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="completeFilter" mnemonicParsing="false" onAction="#completeFilterA" text="Completed" />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </MenuButton>
+            <Button fx:id="removeItem" layoutX="496.0" layoutY="63.0" mnemonicParsing="false" onAction="#removeItemA" text="Remove Item" />
+            <MenuButton fx:id="editItemMenu" layoutX="258.0" layoutY="264.0" mnemonicParsing="false" onAction="#editItemMenuA" text="Edit item">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <TextField fx:id="editName" promptText="Item name" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <TextField fx:id="editDescription" promptText="Item description" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <DatePicker fx:id="editDate" promptText="Due date:" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="editItem" mnemonicParsing="false" onAction="#editItemA" text="Edit" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </MenuButton>
+            <Label layoutX="217.0" layoutY="14.0" prefHeight="17.0" prefWidth="171.0" text="To - Do list App Assignment 4" />
+            <MenuButton fx:id="sortMenu" layoutX="122.0" layoutY="321.0" mnemonicParsing="false" onAction="#sortMenuA" text="Sort by due date">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="sortRecent" mnemonicParsing="false" onAction="#sortRecentA" text="Sort by most recent" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="sortOld" mnemonicParsing="false" onAction="#sortOldA" text="Sort by least recent" />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </MenuButton>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
